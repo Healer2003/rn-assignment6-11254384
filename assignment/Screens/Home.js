@@ -16,8 +16,8 @@ export default function Home(){
             <Header/>
             <Story/>
 
-            <View style={{flex:1,borderWidth:1,flexDirection:"column"}}>
-                <FlatList data={product} renderItem={render} keyExtractor={item=>item.id} numColumns={2} columnWrapperStyle={{columnGap:20}}/>
+            <View style={{flex:1}}>
+                <FlatList data={product} renderItem={render} keyExtractor={item=>item.id} numColumns={2} columnWrapperStyle={{columnGap:20}} showsVerticalScrollIndicator={false}/>
             </View>
 
         </View>

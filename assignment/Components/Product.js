@@ -26,8 +26,8 @@ export default function Product({name,src}){
 const styles = StyleSheet.create({
     main:{
         width:180,
-        height:400,
-        marginBottom:10
+        height:320,
+        marginBottom:40
     },
     img:{
         objectFit:"cover",
