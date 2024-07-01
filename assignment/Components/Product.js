@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     main:{
         width:'50%',
         height:'50%',
-        borderWidth:1,
+        marginBottom:10
     },
     img:{
         objectFit:"cover",
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     imgview:{
         width:"100%",
         borderWidth:1,
-        borderColor:"red",
+        borderColor:"#df8b62",
         flex:4,
     },
     add:{
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         fontWeight:"500"
     },
     amount:{
-        fontSize:20,
+        fontSize:19,
         color:"#df8b62",
         fontWeight:"500"
     }
