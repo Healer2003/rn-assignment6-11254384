@@ -36,8 +36,6 @@ const styles = StyleSheet.create({
     },
     imgview:{
         width:"100%",
-        borderWidth:1,
-        borderColor:"#df8b62",
         flex:4,
     },
     add:{
