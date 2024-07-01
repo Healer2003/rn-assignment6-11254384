@@ -25,7 +25,7 @@ export default function Product({name,src}){
 
 const styles = StyleSheet.create({
     main:{
-        width:180,
+        width:185,
         height:320,
         marginBottom:40
     },
