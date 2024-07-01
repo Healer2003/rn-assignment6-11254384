@@ -1,14 +1,20 @@
-import { ImageBackground, StyleSheet,View } from "react-native"
+import { Image, StyleSheet,View,Text } from "react-native"
 import {Ionicons} from '@expo/vector-icons'
 
-export default function Product(){
+export default function Product({name}){
     return(
         <View style={styles.main}>
-           <ImageBackground style={styles.img} source={require('../assets/dress1.png')}>
-            <Ionicons name="add-circle-outline" size={35} color={"black"}/>
-           </ImageBackground>
-           <View>
-
+            <View style={styles.imgview}>
+            <Image style={styles.img} source={require('../assets/dress1.png')}/>
+            <Ionicons style={styles.add} name="add-circle-outline" size={35} color={"black"}/>
+            </View>
+          
+           <View style={{flex:1}}>
+            <Text>
+                {name}
+            </Text>
+            <Text></Text>
+            <Text></Text>
            </View>
 
         </View>
@@ -19,16 +25,25 @@ export default function Product(){
 const styles = StyleSheet.create({
     main:{
         width:'50%',
-        height:'60%'
+        height:'50%',
+        borderWidth:1,
+        alignItems:"center"
     },
     img:{
-        height:260,
-        resizeMode:"contain",
-        flexDirection:"row",
-        alignItems:"flex-end",
-        justifyContent:"flex-end",
-        paddingHorizontal:10,
-        paddingVertical:10
+        objectFit:"cover",
+        width:'100%',
+        height:'100%'
+    },
+    imgview:{
+        width:"100%",
+        borderWidth:1,
+        borderColor:"red",
+        flex:4,
+    },
+    add:{
+        position:"absolute",
+        top:215,
+        left:148
     }
 
 })
