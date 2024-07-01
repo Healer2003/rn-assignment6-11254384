@@ -1,11 +1,11 @@
 import { Image, StyleSheet,View,Text } from "react-native"
 import {Ionicons} from '@expo/vector-icons'
 
-export default function Product({name}){
+export default function Product({name,src}){
     return(
         <View style={styles.main}>
             <View style={styles.imgview}>
-            <Image style={styles.img} source={require('../assets/dress1.png')}/>
+            <Image style={styles.img} source={src}/>
             <Ionicons style={styles.add} name="add-circle-outline" size={34} color={"black"}/>
             </View>
            <View style={{flex:1,paddingLeft:3}}>
@@ -25,8 +25,8 @@ export default function Product({name}){
 
 const styles = StyleSheet.create({
     main:{
-        width:'50%',
-        height:'50%',
+        width:180,
+        height:400,
         marginBottom:10
     },
     img:{

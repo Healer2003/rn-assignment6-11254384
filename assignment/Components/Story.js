@@ -30,11 +30,11 @@ const styles = StyleSheet.create({
         flex:1
     },
     subview:{
-         paddingHorizontal:10,
-         paddingVertical:10,
+         paddingHorizontal:8,
+         paddingVertical:8,
          borderRadius:50,
          backgroundColor:"#f9f9f9",
-         marginLeft:10
+         marginLeft:15
          
     }
 })

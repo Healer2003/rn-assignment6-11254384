@@ -5,11 +5,11 @@ export default function Header(){
     return(
         <View style={styles.head}>
             <SimpleLineIcons name="menu" size={28} color={"black"}/>
-            <View style={{flex:0.99}}>
+            <View style={{flex:0.97}}>
             <Image style={styles.img} source={require('../assets/Logo.png')} alt="app-logo"/>
             </View>
             <EvilIcons name="search" size={48} color={"black"}/>
-            <SimpleLineIcons style={{marginLeft:10}} name="handbag" size={33} color={"black"}/>
+            <SimpleLineIcons style={{marginLeft:18}} name="handbag" size={33} color={"black"}/>
         </View>
     )
 }
