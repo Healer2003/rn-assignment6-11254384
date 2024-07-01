@@ -6,7 +6,7 @@ export default function Product({name,src}){
         <View style={styles.main}>
             <View style={styles.imgview}>
             <Image style={styles.img} source={src}/>
-            <Ionicons style={styles.add} name="add-circle-outline" size={34} color={"black"}/>
+            <Ionicons style={styles.add} name="add-circle-outline" size={30} color={"black"}/>
             </View>
            <View style={{flex:1,paddingLeft:3}}>
             <Text style={styles.text}>
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     add:{
         position:"absolute",
         top:215,
-        left:148
+        left:144
     },
     text:{
         fontSize:15,
