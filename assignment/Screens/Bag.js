@@ -8,7 +8,7 @@ import { BagContext } from "../Components/BagContext"
 
 
 export default function Bag(){
-    const {bags} = useContext(BagContext)
+    const {bags,deleteFromBag} = useContext(BagContext)
     const navigation = useNavigation()
     return(
         <View style={{
@@ -22,7 +22,7 @@ export default function Bag(){
             </View>
             
             <View style={{flex:1,borderWidth:1}}>
-                <FlatList data={bags} renderItem={BagComponent} keyExtractor={item=>item.id}/>
+                <FlatList data={bags} renderItem={({item})=>(<BagComponent item={item} deleteFromBag={deleteFromBag}/>)} keyExtractor={item=>item.id}/>
             </View>
         </View>
     )

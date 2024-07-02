@@ -1,8 +1,12 @@
 import { Image,StyleSheet,View,Text } from "react-native"
 import {Ionicons,MaterialIcons} from '@expo/vector-icons'
+import { useContext } from "react"
+import { BagContext } from "./BagContext"
 
-export default function BagComponent({item}){
-    return(
+
+export default function BagComponent({item,deleteFromBag}){
+    
+    return(   
      <View style={styles.main}>
         <View>
            <Image source={item.image}/> 
@@ -13,7 +17,7 @@ export default function BagComponent({item}){
         <Text style={[styles.text,{color:"#898993"}]}>reversible angora cardigan</Text>
         <Text style={styles.amount}>${120}</Text>
         </View>
-        <MaterialIcons name="highlight-remove" size={25} color={"red"}/>
+        <MaterialIcons name="highlight-remove" size={25} color={"red"} onPress={()=>{deleteFromBag(item)}}/>
      </View>
     )
 }

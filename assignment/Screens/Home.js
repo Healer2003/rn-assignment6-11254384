@@ -11,12 +11,11 @@ export default function Home(){
     const navigation = useNavigation()
     const {addToBag} = useContext(BagContext)
     
-    const add = (items)=>{
-        addToBag(items)
+    const add = (item)=>{
+        addToBag(item)
         navigation.navigate('Bag')
-        
-
     }
+    
 
     const render = ({item}) =>{
         return(
