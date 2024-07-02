@@ -21,8 +21,8 @@ export default function Bag(){
             <Text style={styles.text}>Shopping Bag</Text>
             </View>
             
-            <View style={{flex:1,borderWidth:1}}>
-                <FlatList data={bags} renderItem={({item})=>(<BagComponent item={item} deleteFromBag={deleteFromBag}/>)} keyExtractor={item=>item.id}/>
+            <View style={{flex:1}}>
+                <FlatList data={bags} renderItem={({item})=>(<BagComponent item={item} deleteFrom={deleteFromBag}/>)} keyExtractor={item=>item.id}/>
             </View>
         </View>
     )

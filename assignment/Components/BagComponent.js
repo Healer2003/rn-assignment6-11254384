@@ -4,7 +4,7 @@ import { useContext } from "react"
 import { BagContext } from "./BagContext"
 
 
-export default function BagComponent({item,deleteFromBag}){
+export default function BagComponent({item,deleteFrom}){
     
     return(   
      <View style={styles.main}>
@@ -17,7 +17,7 @@ export default function BagComponent({item,deleteFromBag}){
         <Text style={[styles.text,{color:"#898993"}]}>reversible angora cardigan</Text>
         <Text style={styles.amount}>${120}</Text>
         </View>
-        <MaterialIcons name="highlight-remove" size={25} color={"red"} onPress={()=>{deleteFromBag(item)}}/>
+        <MaterialIcons name="highlight-remove" size={25} color={"red"} onPress={()=>{deleteFrom(item)}}/>
      </View>
     )
 }
@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
         height:230,
         marginBottom:30,
         flexDirection:"row",
-        borderWidth:1
     },
     textView:{
         flex:1,

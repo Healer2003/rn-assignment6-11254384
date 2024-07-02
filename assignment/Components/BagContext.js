@@ -23,12 +23,11 @@ export const BagProvider = ({children})=>{
             await AsyncStorage.setItem('bags',JSON.stringify(newItems))
             setBags(newItems);
         }
-
+    }
     const deleteFromBag = async (item) =>{
         const newItems = bags.filter((bag)=>bag.id !== item.id)
         await AsyncStorage.setItem('bags', JSON.stringify(newItems))
         setBags(newItems)
-    }
     }
     const product = {
         bags,
