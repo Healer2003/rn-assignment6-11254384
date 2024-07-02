@@ -3,12 +3,24 @@ import Header from "../Components/Header"
 import Story from "../Components/Story"
 import {product} from '../Components/Data'
 import Product from "../Components/Product"
+import { useContext } from "react"
+import { useNavigation } from "@react-navigation/native"
+import { BagContext } from "../Components/BagContext"
 
 export default function Home(){
+    const navigation = useNavigation()
+    const {addToBag} = useContext(BagContext)
+    
+    const add = (items)=>{
+        addToBag(items)
+        navigation.navigate('Bag')
+        
+
+    }
 
     const render = ({item}) =>{
         return(
-            <Product name={item.name} src={item.image}/>
+            <Product name={item.name} src={item.image} press={()=>{add(item)}}/>
         )
     }
     return(

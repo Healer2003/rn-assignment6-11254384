@@ -1,12 +1,15 @@
 import { Image, StyleSheet,View,Text } from "react-native"
 import {Ionicons} from '@expo/vector-icons'
+import { product } from "./Data"
 
-export default function Product({name,src}){
+
+export default function Product({name,src,press}){
+   
     return(
         <View style={styles.main}>
             <View style={styles.imgview}>
             <Image style={styles.img} source={src}/>
-            <Ionicons style={styles.add} name="add-circle-outline" size={30} color={"black"}/>
+            <Ionicons style={styles.add} onPress={press} name="add-circle-outline" size={30} color={"black"}/>
             </View>
            <View style={{flex:1,paddingLeft:3}}>
             <Text style={styles.text}>
@@ -14,7 +17,7 @@ export default function Product({name,src}){
             </Text>
             <Text style={[styles.text,{color:"#898993"}]}>reversible angora cardigan</Text>
             <Text style={styles.amount}>
-                $120
+                ${120}
             </Text>
            </View>
 

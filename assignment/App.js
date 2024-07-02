@@ -11,7 +11,7 @@ export default function App() {
   return (
     <BagProvider>
     <NavigationContainer>
-   <Stack.Navigator>
+   <Stack.Navigator initialRouteName='Home'>
     <Stack.Screen name='Home' component={Home} options={{headerShown:false}}/>
     <Stack.Screen name='Bag' component={Bag} options={{headerShown:false}}/>
    </Stack.Navigator>

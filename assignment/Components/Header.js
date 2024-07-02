@@ -2,9 +2,11 @@ import { Image, StyleSheet, View,Text} from "react-native"
 import {Ionicons,SimpleLineIcons,EvilIcons} from '@expo/vector-icons'
 import { useContext } from "react"
 import { BagContext } from "./BagContext"
+import { useNavigation } from "@react-navigation/native"
 
 export default function Header(){
     const {bags} = useContext(BagContext)
+    const navigation = useNavigation();
     return(
         <View style={styles.head}>
             <SimpleLineIcons name="menu" size={28} color={"black"}/>
@@ -13,7 +15,7 @@ export default function Header(){
             </View>
             <EvilIcons name="search" size={48} color={"black"}/>
             <View style={{position:"relative",}}>
-            <SimpleLineIcons style={{marginLeft:18}} name="handbag" size={33} color={"black"}/>
+            <SimpleLineIcons style={{marginLeft:18}} name="handbag" size={33} color={"black"} onPress={()=>{navigation.navigate('Bag')}}/>
             <View style={{
                 backgroundColor:"#df8b62",
                 width:15,

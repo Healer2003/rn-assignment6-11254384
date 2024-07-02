@@ -1,16 +1,25 @@
-import { createContext, useState } from "react";
+import { createContext, useState} from "react"
 
-export const BagContext = createContext();
+export const BagContext = createContext()
 
-export const BagProvider = ({children}) =>{
-    const [bags, setBags] = useState([1,2,3,4,5,,6,7,8]);
-    const product = {
-        bags
+export const BagProvider = ({children})=>{
+
+    const [bags, setBags] = useState([])
+
+    const addToBag =(item)=>{
+        const itemExists = bags.findIndex((item)=> bags.id === item.id)
+        if(itemExists === -1){
+            setBags([...bags, item])
+        }
     }
+    const product = {
+        bags,
+        addToBag,
+    }
+
     return(
-        <BagContext.Provider value={product} >
+        <BagContext.Provider value={product}>
             {children}
         </BagContext.Provider>
     )
-
 }
