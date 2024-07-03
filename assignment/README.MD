@@ -29,3 +29,7 @@ This is a react native mobile shopping app that allows users to browse and purch
 
 ###  Header
 - **Purpose**: Contains navigation and search functionalities as awell as the logo.
+
+## Screenshots
+
+
