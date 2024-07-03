@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet, Text ,View} from "react-native"
 import BagComponent from "../Components/BagComponent"
-import {Ionicons,MaterialIcons} from '@expo/vector-icons'
-import { useNavigation, useRoute } from "@react-navigation/native"
+import {Ionicons} from '@expo/vector-icons'
+import { useNavigation} from "@react-navigation/native"
 import { useContext } from "react"
 import { BagContext } from "../Components/BagContext"
 
@@ -22,7 +22,7 @@ export default function Bag(){
             </View>
             
             <View style={{flex:1}}>
-                <FlatList data={bags} renderItem={({item})=>(<BagComponent item={item} deleteFrom={deleteFromBag}/>)} keyExtractor={item=>item.id}/>
+                <FlatList data={bags} renderItem={({item})=>(<BagComponent item={item} deleteFrom={deleteFromBag}/>)} keyExtractor={item=>item.id} showsVerticalScrollIndicator={false}/>
             </View>
         </View>
     )

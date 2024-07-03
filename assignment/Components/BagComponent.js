@@ -1,9 +1,5 @@
 import { Image,StyleSheet,View,Text } from "react-native"
-import {Ionicons,MaterialIcons} from '@expo/vector-icons'
-import { useContext } from "react"
-import { BagContext } from "./BagContext"
-
-
+import {MaterialIcons} from '@expo/vector-icons'
 export default function BagComponent({item,deleteFrom}){
     
     return(   

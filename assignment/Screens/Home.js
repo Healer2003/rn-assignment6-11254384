@@ -7,13 +7,16 @@ import { useContext } from "react"
 import { useNavigation } from "@react-navigation/native"
 import { BagContext } from "../Components/BagContext"
 
+
 export default function Home(){
     const navigation = useNavigation()
-    const {addToBag} = useContext(BagContext)
+    const {bags,addToBag} = useContext(BagContext)
     
     const add = (item)=>{
-        addToBag(item)
-        navigation.navigate('Bag')
+        
+
+        bags.length == 0 ? addToBag(item) && navigation.navigate('Bag'):addToBag(item)
+        
     }
     
 
